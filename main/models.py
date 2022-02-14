@@ -80,7 +80,7 @@ class PriceHistory(models.Model):
         related_name="prices",
         on_delete=models.CASCADE,
     )
-    price = models.DecimalField(_("Price"), max_digits=5, decimal_places=2)
+    price = models.DecimalField(_("Price"), max_digits=10, decimal_places=5)
     date_from = models.DateField(
         _("Date from"), auto_now=False, auto_now_add=False
     )

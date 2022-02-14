@@ -33,7 +33,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-    @action(methods=["GET"], detail=False, url_path="by-price")
+    @action(methods=["GET"], detail=False, url_path="by-price", url_name="products-by-price")
     def get_products_by_price(self, request: Request, *args, **kwargs):
         queryset = self.get_queryset()
 
